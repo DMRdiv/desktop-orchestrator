@@ -1,0 +1,29 @@
+run:
+  timeout: 5m
+  tests: true
+
+linters:
+  disable-all: true
+  enable:
+    # Essential (Mandated by CCC)
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    # Complexity & Style
+    - gocyclo       # Cyclomatic complexity
+    - funlen        # Function length
+    - goconst       # Magic number/string detection
+    - misspell      # English typos
+    - gosec         # Security scanner
+    - goimports     # Import formatting
+
+linters-settings:
+  gocyclo:
+    min-complexity: 15
+  funlen:
+    lines: 65
+    statements: 40
+  goimports:
+    local-prefixes: github.com/DMRdiv/desktop-orchestrator

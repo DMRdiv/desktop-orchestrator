@@ -4,15 +4,11 @@
 
 It focuses on **safe, additive reproduction** of a workstation environment using existing system tools (package managers, desktop settings, dotfiles), rather than attempting full system determinism.
 
----
-
 ## Goals
 
 * Reduce the time required to set up a new Linux workstation
 * Make desktop configuration **repeatable, versioned, and reviewable**
 * Preserve existing imperative workflows (no “rewrite your OS” requirement)
-
----
 
 ## Non-Goals
 
@@ -21,8 +17,6 @@ It focuses on **safe, additive reproduction** of a workstation environment using
 * Managing servers, clusters, or cloud infrastructure
 * Automatic destructive cleanup or reconciliation
 
----
-
 ## Scope (v1)
 
 * Linux desktop environments
@@ -30,16 +24,12 @@ It focuses on **safe, additive reproduction** of a workstation environment using
 * Ubuntu LTS and Fedora
 * Safe, additive application of configuration
 
----
-
 ## Status
 
-**Early development** — APIs, formats, and behavior are unstable.
+**Early development** - APIs, formats, and behavior are unstable.
 
 This project is currently developed for personal use.
 Documentation and public release may come later.
-
----
 
 ## License
 

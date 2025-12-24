@@ -1,1 +1,63 @@
+# --- Go Build Artifacts ---
+# Binaries
+bin/
+dist/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binaries (created by `go test -c`)
+*.test
+
+# Code coverage output
+*.out
+coverage.txt
+profile.out
+
+# --- Dependency Management ---
+vendor/
+
+# Go workspace files (for multi-module local dev)
+go.work
+go.work.sum
+
+# --- Tooling & Environments ---
+# Environment variables
+.env
+.env.*
+
+# Taskfile output/cache
+.task/
+
+# Pre-commit internal cache
+.pre-commit-config.yaml.save
+
+# --- IDEs & Editors ---
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# JetBrains (GoLand)
+.idea/
+*.iml
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+
+# --- OS Specific ---
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# --- Project Specific ---
 internal-docs/

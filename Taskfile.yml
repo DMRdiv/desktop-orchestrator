@@ -1,0 +1,37 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: lint
+      - task: test
+
+  # Run the full linter
+  lint:
+    desc: Run golangci-lint on the entire project
+    cmds:
+      - golangci-lint run ./...
+
+  # Format code
+  fmt:
+    desc: Run go fmt and goimports
+    cmds:
+      - go fmt ./...
+
+  # Run tests
+  test:
+    desc: Run all tests
+    cmds:
+      - go test -race ./...
+
+  # Check for vulnerabilities
+  vuln:
+    desc: Check for known vulnerabilities in dependencies
+    cmds:
+      - govulncheck ./...
+
+  # Build the binary
+  build:
+    desc: Build the dspo binary
+    cmds:
+      - go build -o bin/dspo ./cmd/dspo
