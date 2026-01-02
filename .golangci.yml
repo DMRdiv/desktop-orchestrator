@@ -1,3 +1,5 @@
+version: "2"
+
 run:
   timeout: 5m
   tests: true
@@ -5,18 +7,21 @@ run:
 linters:
   disable-all: true
   enable:
-    # Essential (Mandated by CCC)
+    # Essential
     - errcheck
-    - gosimple
     - govet
     - ineffassign
     - staticcheck
+
     # Complexity & Style
     - gocyclo       # Cyclomatic complexity
     - funlen        # Function length
     - goconst       # Magic number/string detection
     - misspell      # English typos
     - gosec         # Security scanner
+
+formatters:
+  enable:
     - goimports     # Import formatting
 
 linters-settings:
